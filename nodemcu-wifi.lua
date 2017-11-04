@@ -1,5 +1,5 @@
 --By Vishvendra Singh on 05/11/2017 in lua
---This creates soft access point with nodemcu and let the devices connect with thi AP (Access Point)
+--This connect with the wifi named AccessPoint with nodemcu
 --GPIO Define
 function initGPIO()
 --1,2EN 	D1 GPIO5
@@ -20,7 +20,7 @@ end
 
 function setupAPMode()
 wifi.setmode(wifi.STATION)
-wifi.sta.config("SoftAPNodeMcu","12345678")
+wifi.sta.config("AccessPoint","12345678")
 print(wifi.sta.getip())
 collectgarbage();
 
